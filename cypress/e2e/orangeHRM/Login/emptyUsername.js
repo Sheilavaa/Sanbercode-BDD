@@ -10,12 +10,9 @@ When('I should see the homepage', () => {
     loginPage.verifyLoginPage().should('have.text','Login');
 });
 
-When('I submit the Invalid Username', () => {
-    loginPage.inputUsername().type('Admin');
-});
 
-When('I submit the Invalid Password', () => {
-    loginPage.inputPassword().type('sheila123');
+When('I submit the Password', () => {
+    loginPage.inputPassword().type('admin123');
 });
 
 Then('I click the button Login', () => {

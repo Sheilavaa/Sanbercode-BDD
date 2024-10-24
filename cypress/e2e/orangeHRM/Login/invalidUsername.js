@@ -24,6 +24,6 @@ Then('I click the button Login', () => {
     cy.wait('@action');
 });
 
-Then('I verify login success', () => {
-    loginPage.dashboardPage().should('have.text', 'Dashboard')
+Then('I failed to Login', () => {
+    loginPage.invalidCredentials()
 });
