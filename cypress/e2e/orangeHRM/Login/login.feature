@@ -16,7 +16,15 @@ Feature: Login Feature
       Then I click the button Login
       Then I verify login success
 
-     Scenario: Login with Invalid Credentials
+     Scenario: Login with Invalid Username
+      Given I visit the URL
+      And I should see the homepage
+      When I submit the Invalid Username
+      And I submit the Password
+      Then I click the button Login
+      Then I verify login success
+
+     Scenario: Login with Invalid Password
       Given I visit the URL
       And I should see the homepage
       When I submit the Invalid Username
